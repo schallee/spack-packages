@@ -6,6 +6,7 @@ from spack_repo.builtin.build_systems.makefile import MakefilePackage
 
 from spack.package import *
 
+
 class Xosview(MakefilePackage):
     """Classic X11 system monitoring tool"""
 
@@ -28,10 +29,10 @@ class Xosview(MakefilePackage):
     depends_on("libxpm")
 
     def setup_build_environment(self, env: EnvironmentModifications) -> None:
-      env.set("PREFIX", prefix)
+        env.set("PREFIX", prefix)
 
-    #def build(self, spec, prefix):
-        #make(f"CXX={spack_cxx}")
+    # def build(self, spec, prefix):
+    # make(f"CXX={spack_cxx}")
 
     def install(self, spec, prefix):
         make("install")
