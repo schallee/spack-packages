@@ -32,7 +32,7 @@ class Xosview(MakefilePackage):
     depends_on("libxpm")
 
     def setup_build_environment(self, env: EnvironmentModifications) -> None:
-        env.set("PREFIX", prefix)
+        env.set("PREFIX", self.prefix)
 
     def install(self, spec, prefix):
         make("install")
