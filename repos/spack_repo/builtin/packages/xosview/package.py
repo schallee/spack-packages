@@ -20,10 +20,7 @@ class Xosview(MakefilePackage):
 
     license("GPL-2.0-only", checked_by="schallee")
 
-    version(
-        "1.25",
-        sha256="e5f5ec03a0611397f8aafd07f05d4763726d9911139d9e267c5f308af9a6955b"
-    )
+    version("1.25", sha256="e5f5ec03a0611397f8aafd07f05d4763726d9911139d9e267c5f308af9a6955b")
 
     depends_on("cxx", type="build")
     depends_on("gmake", type="build")
